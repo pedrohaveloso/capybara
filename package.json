@@ -1,0 +1,22 @@
+{
+  "name": "capybara",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch ./src/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@types/jsdom": "^21.1.7",
+    "jsdom": "^25.0.0"
+  }
+}
