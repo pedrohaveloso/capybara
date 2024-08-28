@@ -110,7 +110,7 @@ const h = () => {
         getData(Source.GoogleSearch, "Notebook Dell"),
       ]);
 
-      writeFile("./results.json", JSON.stringify(total), {}, () => {});
+      writeFile("./tmp/results.json", JSON.stringify(total), {}, () => {});
     }
 
     rl.close();
