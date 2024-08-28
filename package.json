@@ -1,12 +1,12 @@
 {
   "name": "capybara",
   "version": "1.0.0",
-  "main": "capybara.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "node --env-file=.env ./build/capybara.js",
+    "dev": "node --env-file=.env ./build/index.js",
     "ts": "tsc --watch",
     "dev-ts": "tsx watch ./src/",
-    "build": "tsc && node --env-file=.env ./build/capybara.js"
+    "build": "tsc && node --env-file=.env ./build/index.js"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +14,11 @@
   "description": "",
   "devDependencies": {
     "@types/node": "^22.5.0",
+    "@types/jsdom": "^21.1.7",
     "tsx": "^4.19.0",
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "@types/jsdom": "^21.1.7",
     "jsdom": "^25.0.0"
   }
 }

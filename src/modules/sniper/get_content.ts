@@ -1,4 +1,4 @@
-import { request } from "./kernel/request";
+import { request } from "../core/request";
 import { Source } from "./source";
 
 const sourceUrl = new Map<Source, string>([
@@ -7,7 +7,10 @@ const sourceUrl = new Map<Source, string>([
   [Source.Amazon, "https://amazon.com.br/s?k="],
 ]);
 
-export const content = async (source: Source, target: string) => {
+export const getContent = async (
+  source: Source,
+  target: string
+): Promise<string> => {
   const url = sourceUrl.get(source);
 
   if (url === undefined) {

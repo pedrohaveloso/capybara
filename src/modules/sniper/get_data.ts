@@ -1,15 +1,15 @@
 import { JSDOM } from "jsdom";
 import { Source } from "./source";
 import { Adapter } from "./adapter";
-import { GoogleSearchAdapter } from "./adapter/google_search_adapter";
+import { GoogleSearch } from "./adapter/google_search";
 
 const SourceAdapter = new Map<Source, Adapter>([
-  [Source.GoogleSearch, GoogleSearchAdapter],
+  [Source.GoogleSearch, GoogleSearch],
 ]);
 
 export type RawTarget = { price: number; url: string };
 
-export const rawData = (source: Source, content: string): RawTarget[] => {
+export const getData = (source: Source, content: string): RawTarget[] => {
   const contentHTML = new JSDOM(content);
   const adapter = SourceAdapter.get(source);
 

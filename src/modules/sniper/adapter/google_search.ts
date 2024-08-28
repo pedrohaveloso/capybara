@@ -1,8 +1,8 @@
 import { Adapter } from "../adapter";
-import { priceNumber } from "../price_number";
-import { RawTarget } from "../raw_data";
+import { priceNumber } from "../formatter";
+import { RawTarget } from "../get_data";
 
-export const GoogleSearchAdapter: Adapter = {
+export const GoogleSearch: Adapter = {
   rawData(document: Document): RawTarget[] {
     const priceElements = document.querySelectorAll("span.a8Pemb.OFFNJ");
 
@@ -13,7 +13,7 @@ export const GoogleSearchAdapter: Adapter = {
 
       const url = new URL(
         "https://google.com" +
-          (anchor instanceof HTMLAnchorElement ? anchor.href : "")
+          (anchor != null && "href" in anchor ? anchor.href : "")
       );
 
       return {
