@@ -1,11 +1,12 @@
 {
   "name": "capybara",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "capybara.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node ./dist/index.js",
-    "ts": "tsx watch ./src/"
+    "dev": "node ./build/capybara.js",
+    "ts": "tsc --watch",
+    "dev-ts": "tsx watch ./src/",
+    "build": "tsc && node ./build/capybara.js"
   },
   "keywords": [],
   "author": "",
