@@ -1,5 +1,5 @@
 export enum Source {
   GoogleSearch = "GoogleSearch",
-  MercadoLivre = "MercadoLivre",
+  MercadoLibre = "MercadoLibre",
   Amazon = "Amazon",
 }

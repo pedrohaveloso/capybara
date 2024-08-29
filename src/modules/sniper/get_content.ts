@@ -3,7 +3,7 @@ import { Source } from "./source";
 
 const sourceUrl = new Map<Source, string>([
   [Source.GoogleSearch, "https://google.com/search?tbm=shop&q="],
-  [Source.MercadoLivre, "https://lista.mercadolivre.com.br/"],
+  [Source.MercadoLibre, "https://lista.mercadolivre.com.br/"],
   [Source.Amazon, "https://amazon.com.br/s?k="],
 ]);
 
